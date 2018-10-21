@@ -157,7 +157,8 @@ chirag@chirag-rathod:~/heady/ins_test/shopping$
 
 * **Success Response:**
   
-  {
+  * **Code:** 201 <br />
+    **Content:** `{
     "_id": "40d66350",
     "parent_id_list": [
       "c27a64f0"
@@ -165,9 +166,7 @@ chirag@chirag-rathod:~/heady/ins_test/shopping$
     "has_category": false,
     "has_product": false,
     "title": "Romance"
-  }
-
-  * **Code:** 201 <br />
+  }`
  
 * **Error Response:**
 
@@ -217,9 +216,10 @@ chirag@chirag-rathod:~/heady/ins_test/shopping$
   };  
   
 
-* **Success Response:**
-  
-  {
+* **Success Response:**  
+
+  * **Code:** 201 <br />
+    **Content:** `{
     "_id": "175a2e30",
     "description": "",
     "parent_id_list": [
@@ -227,9 +227,7 @@ chirag@chirag-rathod:~/heady/ins_test/shopping$
     ],
     "price": "USD 10000",
     "title": "jfjejfej fnrlnengl"
-  }
-
-  * **Code:** 201 <br />
+  }`
  
 * **Error Response:**
 
