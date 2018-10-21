@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+
+  mongodb-service:
+      image: mongo
+      ports:
+        - 4000:27017
+        
+  shopping-service:
+      build: ./shopping
+      volumes:
+        - ./shopping:/usr/app
+      ports:
+        - 3000:3000
+      depends_on:
+        - mongodb-service
+
+
