@@ -44,7 +44,7 @@ log4js.configure({
 		errors: { type: 'logLevelFilter', level: 'error', appender: 'errorFile' }
 	},
 		categories: {
-		default: { appenders: ['app', 'errors', 'console'], level: 'debug' },
+		default: { appenders: ['app', 'errors', 'console'], level: 'info' },
 		http: { appenders: ['access'], level: 'info' },
 		https: { appenders: ['access'], level: 'info' }
 	}

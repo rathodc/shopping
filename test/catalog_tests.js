@@ -3,13 +3,14 @@ var request = require('request');
 var root="";
 var child_cat = "";
 var product_added="";
+var host = "http://localhost:3000"
 
 describe('Catalog APIs - Status and content', function() {
 
     describe ('Get Category List', function() {
         it('status', function(done){
             var options = {
-                uri: "http://localhost:3000/api/v1/catalog/category_list",
+                uri: host+"/api/v1/catalog/category_list",
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -28,7 +29,7 @@ describe('Catalog APIs - Status and content', function() {
     describe ('Add Category', function() {
         it('status', function(done){
             var options = {
-                uri: "http://localhost:3000/api/v1/catalog/category",
+                uri: host+"/api/v1/catalog/category",
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -49,7 +50,7 @@ describe('Catalog APIs - Status and content', function() {
     describe ('Add Product', function() {
         it('status', function(done){
             var options = {
-                uri: "http://localhost:3000/api/v1/catalog/product/",
+                uri: host+"api/v1/catalog/product/",
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -70,7 +71,7 @@ describe('Catalog APIs - Status and content', function() {
     describe ('Get Product List', function() {
         it('status', function(done){
             var options = {
-                uri: "http://localhost:3000/api/v1/catalog/product_list",
+                uri: host+"/api/v1/catalog/product_list",
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -90,7 +91,7 @@ describe('Catalog APIs - Status and content', function() {
     describe ('Update Product', function() {
         it('status', function(done){
             var options = {
-                uri: "http://localhost:3000/api/v1/catalog/product/"+product_added,
+                uri: host+"/api/v1/catalog/product/"+product_added,
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
