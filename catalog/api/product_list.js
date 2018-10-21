@@ -33,7 +33,6 @@ var product_list_ml = function(req,res,next){
 	if(req.method != 'GET'){
 	    next(new Error("METHOD_NOT_ALLOWED"))
 	}else{
-		console.log("req.query['category'] "+req.query["category"])
 		if(!req.query["category"])
 			next(new Error("PARAM_MISSING"))			
 		else

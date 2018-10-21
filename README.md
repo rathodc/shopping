@@ -209,6 +209,9 @@ chirag@chirag-rathod:~/heady/ins_test/shopping$
 
   E.g json payload - `{"title":"Redux Analogue Brown Dial Men's & Boy's Watch","price":"USD 10000","parent":"b3364170"}`
 
+  E.g json payload to associate product to another category - `{"title":"Redux Analogue Brown Dial Men's & Boy's Watch","price":"USD 10000","parent":"c3364170","_id":"aa52bac0"}` where
+  "aa52bac0" is the id of product already added and "c3364170" is the another category to which this product needs to be associated
+
 *  **Input Body Schema**
   `{    
       "type": "object",

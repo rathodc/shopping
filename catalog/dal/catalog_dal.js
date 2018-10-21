@@ -12,7 +12,6 @@ var __is_parent_available = function(filter,update){
             { returnOriginal : false },
             function(err,results){
                 if (err) reject(err,results.value);                
-                console.log("results : "+JSON.stringify(results.value))
                 resolve(results.value);
             })
         })

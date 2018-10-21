@@ -49,7 +49,6 @@ load_manager.registerToStage(load_manager.getErrorHandlerStage(),define_error_ha
 var validate_and_go_next = function(schema,req,res,next){
 	var result = validator_obj.validate(req.body,schema);
 	if(result.errors.length>0){
-		console.log("Invalid request")
 		next(new Error("INVALID_REQUEST"))
 	}else	
 		next()

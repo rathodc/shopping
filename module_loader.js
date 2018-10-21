@@ -26,7 +26,6 @@ var load_services = function(resolve,reject){
 	var services_folder = process.env.NODE_SRC_DIR+"/services/"
 	log.debug(services_folder)	
 	fs.readdirSync(services_folder).forEach(file => {
-		console.log(services_folder+file.split(".js")[0])
 		require(services_folder+file.split(".js")[0])
 	})
 	resolve()
@@ -35,7 +34,6 @@ var load_services = function(resolve,reject){
 var start_server = function(resolve,reject){
 	var server = app.listen(process.env.PORT)
     log.info('Listening on port ', server.address().port, " with pid ", process.pid )
-	console.log("Listening on "+process.env.PORT+", Web URL: http://localhost:"+process.env.PORT)
 	resolve()
 }
 
