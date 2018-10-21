@@ -1,0 +1,13 @@
+{
+		"server": {
+			"host": "localhost",
+			"port": 3000
+		},
+		"db": {
+			"host": "mongodb://localhost:4000",
+			"db_name": "shopping"
+		},
+		"modules": [
+			"catalog"
+		]		
+}
