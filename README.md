@@ -4,7 +4,7 @@ Repository Created for Shopping Application - Browse Only
 ### This is a simple shopping application with following features :-<br>
 1.Provides an endpoint to add a category to a root category or sub-category<br>
 2.Provides an endpoint to add a product to single/multiple categories<br>
-3.Provides an endpoint to list of all categories along with it's subcategories starting from root category<br>
+3.Provides an endpoint to list all categories along with it's subcategories starting from root category<br>
 4.Provides an endpoint to list all products associated with a particular category<br>
 5.Provides an endpoint to update product information<br>
 <br>
@@ -270,9 +270,7 @@ chirag@chirag-rathod:~/heady/ins_test/shopping$
   E.g json payload - `{"title":"New Title","price":"USD 10000","description":"New Desc"}`
 
 *  **Input Body Schema**
-  `{    
-      "type": "object"      
-  }`  
+  `{"type":"object","properties":{"title":{"type":"string"},"price":{"type":"string"},"description":{"type":"string"}}}`  
   
 
 * **Success Response:**  
@@ -324,7 +322,7 @@ chirag@chirag-rathod:~/heady/ins_test/shopping$
 
 **Get Product List**
 ----
-  This api will help you get all categories and its sub-categories in a tree-like structure
+  This api will help you get all products associated to a particular category
 
 * **URL**
 

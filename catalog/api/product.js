@@ -10,7 +10,7 @@ var add_product_schema = {
 	  "parent": {"type": "string","minLength" : 8,"maxLength" : 10},
 	  "price":{"type": "string","minLength" : 6,"maxLength" : 10},
 	  "description":{"type": "string","maxLength" : 100},
-	  "_id":{"type": "string","minLength" : 8,"maxLength" : 10},
+	  "_id":{"type": "string","minLength" : 8,"maxLength" : 10}
 	},
 	"required": ["title","parent","price"]
 };  
