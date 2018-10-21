@@ -14,7 +14,7 @@ describe('Catalog APIs - Status and content', function() {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
-                    'auth-token':'dqqwd'
+                    'auth-token':'e4b76ae67e4b'
                 }
             }            
             request(options, function(error, response, body) {
@@ -33,7 +33,7 @@ describe('Catalog APIs - Status and content', function() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'auth-token':'dqqwd'
+                    'auth-token':'e4b76ae67e4b'
                 },
                 json:true,
                 body:{title:'Men\'s Fashion',parent:root}    
@@ -42,6 +42,7 @@ describe('Catalog APIs - Status and content', function() {
                 expect(response.statusCode).to.equal(201);
                 expect(body.title).to.equal('Men\'s Fashion')
                 child_cat = body._id
+                console.log("child_cat : "+child_cat)
                 done();
             });
         });    
@@ -50,11 +51,11 @@ describe('Catalog APIs - Status and content', function() {
     describe ('Add Product', function() {
         it('status', function(done){
             var options = {
-                uri: host+"api/v1/catalog/product/",
+                uri: host+"/api/v1/catalog/product",
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
-                    'auth-token':'dqqwd'
+                    'auth-token':'e4b76ae67e4b'
                 },
                 json:true,
                 body:{title:'Redux Analogue Brown Dial Men\'s & Boy\'s Watch',price:"USD 200",parent:child_cat}    
@@ -75,7 +76,7 @@ describe('Catalog APIs - Status and content', function() {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
-                    'auth-token':'dqqwd'
+                    'auth-token':'e4b76ae67e4b'
                 },
                 qs:{category:child_cat}                
             }            
@@ -95,7 +96,7 @@ describe('Catalog APIs - Status and content', function() {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
-                    'auth-token':'dqqwd'
+                    'auth-token':'e4b76ae67e4b'
                 },
                 json:true,
                 body:{title:'New Product Title',description:'New Desc',price:'New Price'}
